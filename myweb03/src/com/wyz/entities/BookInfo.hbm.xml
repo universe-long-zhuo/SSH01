@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.wyz.entities.BookInfo" table="booklist">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="bookid" column="bookid" type="java.lang.String"></property>
+		<property name="bookname" column="bookname" type="java.lang.String" />
+		<property name="bookprice" column="bookprice" type="java.lang.Integer" />
+		<property name="author" column="author" type="java.lang.String" />
+	</class>
+</hibernate-mapping>
