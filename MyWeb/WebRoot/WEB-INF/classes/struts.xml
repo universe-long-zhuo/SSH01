@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+    <package name="default" extends="struts-default">
+    
+        <action name="showBook" class="com.web.action.BookAction" method="showAllRecord">
+            <result>show.jsp</result>
+        </action>
+        
+        <action name="saveBook" class="com.web.action.BookAction" method="save">
+        	<result name="success" type="redirect">showBook</result>
+        	<result name="input">index.jsp</result>
+        </action>
+        
+        <action name="delBook" class="com.web.action.BookAction" method="del">
+        	<result name="success" type="redirect">showBook</result>
+        </action>
+        
+        <action name="delAllBook" class="com.web.action.BookAction" method="delAll">
+        	<result name="success" type="redirect">showBook</result>
+        </action>
+        
+        <action name="saveUpdate" class="com.web.action.BookAction" method="update">
+        	<result name="success" type="redirect">showBook</result>
+        </action>
+        
+        <action name="updateBook" class="com.web.action.BookAction" method="showRecord">
+        	<result>update.jsp</result>
+        </action>
+        
+    </package>
+
+</struts>

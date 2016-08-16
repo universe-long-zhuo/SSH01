@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="165,10" size="225,318">
+    <action name="showBook" location="65,57" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="show.jsp" />
+      </result>
+    </action>
+    <action name="saveBook" location="65,162" size="150,41">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="delBook" location="65,267" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="show.jsp" path="show.jsp" location="10,135" size="150,55" />
+</Struts2Diagram>
+
