@@ -17,6 +17,7 @@
         <property name="connection.autocommit">true</property>
         <property name="hibernate.hbm2ddl.auto">none</property>
 
-        <mapping resource="com/web/bean/BookInfo.hbm.xml" />
+        <!-- 注意实体xml路径有错误 -->
+        <mapping resource="com/wyz/entities/BookInfo.hbm.xml" />
     </session-factory>
 </hibernate-configuration>

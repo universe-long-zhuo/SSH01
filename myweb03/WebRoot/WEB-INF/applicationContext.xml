@@ -21,30 +21,22 @@
         </property>
     </bean>
 	
-	
+	<!-- 注意看类路径有错误，核对 -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
 	</bean>
 
-	<bean id="bookDAO" class="com.web.dao.impl.BookDAOImpl">
+	<bean id="bookDAO" class="com.wyz.dao.impl.BookDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean id="bookService" class="com.web.service.impl.BookServiceImpl">
+	<bean id="bookService" class="com.wyz.service.impl.BookServiceImpl">
 		<property name="bookDAO" ref="bookDAO"></property>
 	</bean>
 
-	<bean id="bookAction" class="com.web.action.BookAction">
+	<bean id="bookAction" class="com.wyz.action.BookAction">
 		<property name="bookService" ref="bookService"></property>
 	</bean>
-
-	<!--<bean id="SaveBookAction" class="com.web.action.BookAction">
-		<property name="bookService" ref="bookService"></property>
-	</bean>
-
-	<bean id="DelBookAction" class="com.web.action.BookAction">
-		<property name="bookService" ref="bookService"></property>
-	</bean>-->
 
 
 </beans>
